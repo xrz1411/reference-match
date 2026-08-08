@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node / Remotion
+node_modules/
+build/
+dist/
+out/
+.playwright-cli/
+
+# Local runtime configuration and generated media
+resolve-plugin/com.zxr.davinciscript.referencelut/runtime-config.json
+outputs/
+renders/
+exports/
+webui/data/*
+!webui/data/.gitkeep
+*.cube
+*.dpx
+*.mp4
+*.mov
+*.mp3
+
+# Optional upstream engines, weights and caches
+NLUT/
+ColorTransferLib/
+models/
+.DS_Store

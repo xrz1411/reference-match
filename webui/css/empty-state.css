@@ -1,0 +1,4 @@
+/* Keep the initial media cards truly empty until a user chooses an image. */
+[hidden] {
+  display: none !important;
+}

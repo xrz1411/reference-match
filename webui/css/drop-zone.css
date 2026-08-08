@@ -1,0 +1,28 @@
+.drop-zone {
+  position: relative;
+  transition: border-color .14s ease, background-color .14s ease;
+}
+
+.drop-zone::after {
+  content: "拖入图片";
+  position: absolute;
+  inset: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed transparent;
+  border-radius: 8px;
+  color: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.drop-zone.drop-active {
+  background: #1c2027;
+}
+
+.drop-zone.drop-active::after {
+  border-color: var(--accent);
+  background: rgba(233, 195, 99, .1);
+  color: #f7e8bd;
+}

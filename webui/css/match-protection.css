@@ -1,0 +1,48 @@
+.zone-control {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(120, 128, 142, 0.34);
+}
+
+.compact-toggles {
+  display: grid;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.compact-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
+  color: #e1e4e8;
+  font-size: 12px;
+}
+
+.switch {
+  width: 32px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #343a44;
+  cursor: pointer;
+  position: relative;
+  transition: background 160ms ease;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a2aab6;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.switch.active { background: #d7aa43; }
+.switch.active::after { transform: translateX(14px); background: #fff9e9; }
+.switch:focus-visible { outline: 2px solid #f0c85c; outline-offset: 3px; }
