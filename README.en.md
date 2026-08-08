@@ -121,9 +121,3 @@ cd core
 ```
 
 `webui/server.py` uses only the Python standard library for HTTP serving. Core runtime dependencies are listed in `requirements.txt`.
-
-## Release checklist
-
-Verify redistribution rights and required attribution for the Sony LC-709 baseline LUT before publishing it.
-
-Before release, choose a license and add redistributable demo assets.

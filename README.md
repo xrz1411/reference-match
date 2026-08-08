@@ -121,9 +121,3 @@ cd core
 ```
 
 `webui/server.py` 只使用 Python 标准库作为 Web 服务；核心运行时依赖见 `requirements.txt`。
-
-## 开源前检查
-
-S-Log3 的 Sony LC-709 基线 LUT 在发布前应单独核对再分发权限与署名要求。
-
-发布前仍需选择项目许可证、补充可再分发的演示素材，并完成第三方资源授权审核。
