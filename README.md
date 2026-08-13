@@ -6,6 +6,32 @@
 
 所有图像读取、分析、匹配与导出均在本机完成，不上传素材。
 
+## 独立桌面版
+
+除 WebUI 外，项目提供可独立打开的桌面窗口版：不需要启动浏览器，也不依赖 DaVinci Resolve 插件。窗口内保留相同的本地导入、匹配、预览、下载、缓存清理与 LUT 库导入能力。
+
+- macOS（Apple Silicon）：从 Releases 下载 `Reference-Match-*-mac-arm64.dmg`，将应用拖入“应用程序”后打开。
+- Windows（x64）：从 Releases 下载 `Reference-Match-*-win-x64.exe` 后安装。
+- macOS 发布包暂未公证，首次打开如出现保护提示，请在“系统设置 → 隐私与安全性”中选择“仍要打开”。
+
+如果 macOS 提示“软件已损坏”，请先确认应用已拖入“应用程序”，再在终端执行：
+
+```bash
+xattr -cr "/Applications/Reference Match.app"
+```
+
+执行后重新打开应用即可。若放在其他位置，请将命令中的路径改为实际应用路径。
+
+维护者在 macOS 构建 DMG：
+
+```bash
+cd desktop
+npm install
+REFERENCE_MATCH_PYTHON=../.venv/bin/python npm run build:mac
+```
+
+Windows EXE 由仓库的 GitHub Actions（`Build Windows desktop app`）在 Windows 环境生成；推送 `v*` 标签后会自动附加到对应 Release，也可在 Actions 页面手动运行。
+
 ## 功能
 
 - 参考图主色板、RGB 直方图、Cb/Cr 矢量示波器；

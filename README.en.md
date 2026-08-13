@@ -6,6 +6,24 @@ A local-first WebUI that accepts a reference image and a video still, extracts t
 
 All image reading, analysis, matching, and export happen locally. No media is uploaded.
 
+## Standalone desktop app
+
+The project also ships as a standalone desktop window. It opens on its own and does not require a DaVinci Resolve plugin. The same local import, matching, preview, download, cache cleanup, and Resolve LUT-library import features remain available.
+
+- macOS (Apple Silicon): download `Reference-Match-*-mac-arm64.dmg` from Releases and drag the app into Applications.
+- Windows (x64): download and install `Reference-Match-*-win-x64.exe` from Releases.
+- The macOS package is not notarized yet. On first launch, use **System Settings → Privacy & Security → Open Anyway** if macOS blocks it.
+
+If macOS reports that the app is damaged, move it to Applications and run the following in Terminal:
+
+```bash
+xattr -cr "/Applications/Reference Match.app"
+```
+
+Then open the app again. Change the path if you installed it elsewhere.
+
+For maintainers, run `npm install` and `REFERENCE_MATCH_PYTHON=../.venv/bin/python npm run build:mac` inside `desktop/` to create the macOS DMG. Windows installers are built in the repository's GitHub Actions workflow (`Build Windows desktop app`) on Windows; a `v*` tag attaches the installer to its corresponding Release.
+
 ## Features
 
 - Dominant-colour palette, RGB histograms, and a Cb/Cr vectorscope;
