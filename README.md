@@ -128,8 +128,6 @@ S-Log3 LUT：原生 S-Log3 DPX → [Reference LUT] → 输出
 ```text
 core/             匹配、色彩管理、LUT 导出与测试
 webui/            本地 Web 服务与浏览器界面
-promo-remotion/   宣传片 Remotion 源码（不含素材与渲染成品）
-preview/          早期视觉预览稿
 ```
 
 ## 开发与测试

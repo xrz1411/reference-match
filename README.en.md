@@ -120,8 +120,6 @@ Do not put these creative LUTs in the project's global Input LUT, Output LUT, or
 ```text
 core/             Matching, colour management, LUT export, and tests
 webui/            Local web server and browser interface
-promo-remotion/   Remotion promo source, without media or rendered outputs
-preview/          Early visual prototypes
 ```
 
 ## Development and testing
